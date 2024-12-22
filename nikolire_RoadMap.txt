@@ -2,6 +2,6 @@
 2. encore
 3. hono js
 4. next js
-5. 3 js
+5. three js
 6. zsaap
 7. sass
