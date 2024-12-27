@@ -1,5 +1,4 @@
-"use strict";
-// Basic
+//#### Basic ####
 const country = "Bangladeshi";
 console.log(country);
 let rsName; //
@@ -13,7 +12,7 @@ console.log(multiply('10', 20)); //showing error
 let fruits = ['apple', 'banana', 'orange'];
 fruits.push(10); //showing error
 console.log(fruits);
-// Explicit and Union types
+//#### Explicit and Union types ####
 //normal veriable Type
 let a;
 let b;
@@ -35,7 +34,7 @@ arr.push(103); //Or
 arr.push(false); //Or
 arr.push({ name: 'Zohan', age: 5 });
 console.log(arrS, arrN, arr);
-// Object variable Type
+//#### Object variable Type ####
 let o; //without structure
 let ob;
 ob = {
@@ -54,7 +53,7 @@ o = {
 };
 o = [1, 2, 3]; //object type but alw array
 console.log(o, ob);
-//Dynamic Type
+//#### Dynamic Type ####
 //normal veriable
 let aa; //string,number,boolian type
 //array
@@ -89,3 +88,62 @@ const userId = 101;
 const sampleUser = { name: "Alice", age: 25 };
 user(sampleUser);
 useDetails(userId, sampleUser);
+// Function Signature
+let add;
+add = (a, b) => { return (a + b); };
+let userDetails;
+userDetails = (id, user) => {
+};
+//#### Class Signature ####
+class Player {
+    constructor(n, a, c) {
+        this.name = n;
+        this.age = a;
+        this.country = c;
+    }
+    play() {
+        console.log(`${this.name} from ${this.country} is playing!`);
+    }
+}
+const masrafi = new Player('Masrafi', 34, 'Bangladesh');
+const shakib = new Player('shakib', 38, 'BD');
+console.log(masrafi.name);
+shakib.play();
+const players = []; //its a palyer type array
+players.push(masrafi);
+players.push(shakib);
+console.log(players);
+players[0].play();
+//#### Access Modifire ####
+class Player2 {
+    constructor(n, a, c, g) {
+        this.name = n;
+        this.age = a;
+        this.country = c;
+        this.gender = g;
+    }
+    play() {
+        console.log(`${this.name} from ${this.country} is playing!`);
+    }
+}
+const musfiq = new Player2('Mushfiq', 34, 'Bangladesh', 'Male');
+musfiq.name = 'rahman'; //reasignable
+musfiq.age = 20; //not reasignable coz privet property
+musfiq.country = 'England'; //not reasignable coz read-only property
+console.log(musfiq); // value changed but not proper way
+//also define class with access modifire as
+class Player3 {
+    constructor(name, age, country) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
+    }
+    play() {
+        console.log(`${this.name} from ${this.country} is playing!`);
+    }
+}
+const rubel = new Player3('rubel', 34, 'Bangladesh');
+//module system
+import { Player4 } from "./classes/Player4.js"; //Player4 is ts file from src/classes but hare use as js file
+const rassel = new Player4('rassel', 34, 'Bangladesh');
+console.log(rassel);
