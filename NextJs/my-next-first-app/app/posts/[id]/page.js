@@ -15,7 +15,7 @@ export async function generateMetadata({params}) {
 export default async function page({params}) {
 
     const {id} = params;
-    //1by1
+    // 1by1
     // const post = await getPost(id)
     // const postComments = await getPostComments(id)
 

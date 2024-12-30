@@ -4,7 +4,7 @@ import React from 'react'
 export default async function blogDetails({ params }) {
     const { id } = await params;
     if (id === '4') {
-        NotFound(); // Redirects to the 404 page
+       return NotFound(); // Redirects to the 404 page
     }
 
     return (
